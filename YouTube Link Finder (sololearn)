@@ -1,0 +1,8 @@
+
+def youtube_link_finder(link):
+    if link.index("you") == 8:
+        return link.split("/")[-1]
+    else:
+        return link.split("=")[-1]
+
+print(youtube_link_finder(input()))
