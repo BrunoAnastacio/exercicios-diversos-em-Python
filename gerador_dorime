@@ -1,0 +1,15 @@
+#GERADOR DE NOMES EM DORIME
+
+def gerador_dorime(nome):
+    dorime = {"A": "DO", "B": "RI", "C": "ME", "D": "IN", "E": "TE", "F": "RI", "G": "MO","H": "ADA", "I": "PA", "J": "RE", "K": "LA","L": "TI", "M": "RE", "N": "LA","O": "TI", "P": "RE", "Q": "MO", "R": "DO","S": "RI","T": "ME","U": "A", "V": "ME","W": "NO","X": "O","Y": "ME","Z": "NARE"}
+
+    dorimeName = ""
+    n = nome.upper()
+
+    for x in range (0, len(n)):
+        dorimeName += dorime.get(n[x])
+		
+    return dorimeName.capitalize()
+	
+print("Seu nome em Dorime seria " + gerador_dorime(input("Digite nome: \n")))
+
