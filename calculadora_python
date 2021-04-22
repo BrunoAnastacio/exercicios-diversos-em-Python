@@ -1,0 +1,86 @@
+#Uma simples calculadora em Python
+#Afinal, você não é programador enquanto não criar uma calculadora. Todos sabemos disso :)
+
+def somar(*numeros):
+
+	resultado = 0
+	for item in numeros:
+		resultado += item
+	return resultado
+
+
+def subtrair(x, y):
+	return x - y
+
+
+def multiplicar(*numeros):
+	resultado = 1
+	for item in numeros:
+		resultado *= item
+	return resultado
+
+
+def dividir(x, y):
+	if y == 0:
+		return "Impossível dividir por zero!"
+	else:
+		return x / y
+
+
+def calculadora():
+	import sys
+	print("\nCALCULADORA")
+	print("1 - Somar")
+	print("2 - Subtrair")
+	print("3 - Multiplicar")
+	print("4 - Dividir")
+	print("0 - Sair")
+
+	operacao = str(input("Qual operação deseja fazer? "))
+
+	if operacao == '1':
+		print("\nDigite os termos da soma seguido de ENTER")
+		try:
+			x = int(input())
+			y = int(input())
+			print(somar(x, y))
+		except:
+			print("Erro: caractere invalido!")
+		calculadora()
+
+	elif operacao == '2':
+		print("\nDigite os termos da subtração seguido de ENTER")
+		try:
+			x = int(input())
+			y = int(input())
+			print(subtrair(x, y))
+		except:
+			print("Erro: caractere invalido!")
+		calculadora()
+
+	elif operacao == '3':
+		print("\nDigite os termos da multiplicação seguido de ENTER")
+		try:
+			x = int(input())
+			y = int(input())
+			print(multiplicar(x, y))
+		except:
+			print("Erro: caractere invalido!")
+		calculadora()
+
+	elif operacao == '4':
+		print("\nDigite os termos da divisão seguido de ENTER")
+		try:
+			x = int(input())
+			y = int(input())
+			print(dividir(x, y))
+		except:
+			print("Erro: caractere invalido!")
+		calculadora()
+
+	elif operacao == '0':
+		sys.exit("Saida efetuada")
+
+	else:
+		print("Opção invalida!")
+		calculadora()
